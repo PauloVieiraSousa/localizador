@@ -1,0 +1,15 @@
+<form id="formLogin" name="vm.formLogin" class="background-none list list-inset" novalidate>
+    <label class="item item-input">
+            <input type="text" name="email" ng-model="vm.login.email" placeholder="Email" required>
+    </label>
+    <label class="item item-input item-margin-top-10">
+            <input type="password" name="password" ng-model="vm.login.pass" ng-minlength="3" placeholder="Senha" required>
+    </label>
+    <p ng-show="vm.formLogin.email.$invalid && !vm.formLogin.password.$pristine" class="help-block">Informe dados válidos.</p>
+    <!--
+    <a class="button  button-outline  button-light pull-right icon-left  ion-ios-trash-outline item-margin-top-10" ng-click="vm.resetForm()">Limpar</a>
+    -->
+    <button class="button button-block button-balanced pull-left item-margin-top-10" type="submit" ng-click="vm.doLogin()" ng-disabled="vm.formLogin.$invalid">Acessar</button>
+    <button class="button button-block button-clear button-green item-margin-top-10" ng-click="vm.newuser = true"> Cadastrar</button>
+    <button class="button button-block button-clear button-light" ng-click="vm.enableformforgot = true">Esqueci a senha</button>
+</form>

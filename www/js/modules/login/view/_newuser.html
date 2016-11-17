@@ -1,0 +1,27 @@
+<form id="formUser" name="vm.formUser" class="background-none list list-inset" novalidate>
+    <label class="item item-input">
+            <input type="text" name="email" ng-model="vm.user.email" placeholder="Email" required>
+    </label>
+    <label class="item item-input item-margin-top-10">
+            <input type="text" name="name" ng-model="vm.user.name" placeholder="Nome" required>
+    </label>
+    
+    <label class="item item-input item-margin-top-10">
+            <input type="text" name="phonenumber" ng-model="vm.user.phonenumber" placeholder="Número do Telefone" ng-minlength="11"  required>
+    </label>
+
+    <label class="item item-input item-margin-top-10">
+            <input type="password" name="pass" ng-model="vm.user.pass" ng-minlength="3" placeholder="Senha" required>
+    </label>
+    <label class="item item-input item-margin-top-10">
+            <input type="password" name="confirmpassword" ng-model="vm.user.confirmpassword" ng-minlength="3" placeholder="Confirme a Senha" required>
+    </label>
+    <p ng-show="vm.user.pass !== vm.user.confirmpassword && !vm.formUser.pass.$pristine && !vm.formUser.confirmpassword.$pristine" class="help-block">Senhas diferentes.</p>
+    <p ng-show="formUser.email.$invalid && !formUser.password.$pristine" class="help-block">Informe dados válidos.</p>
+
+
+    <button class="button button-block button-balanced pull-left item-margin-top-10 icon-left icon-left" ng-click="vm.registerNewUser()" ng-disabled="vm.formUser.$invalid">Cadastrar</button>
+    <button class="button button-block  button-outline  button-light pull-right item-margin-top-10" type="submit" ng-click="vm.resetForm()">Limpar</button>
+
+    <a class="button button-block button-clear button-dark  item-margin-top-10" ng-click="vm.goBack()">Voltar</a>
+</form>

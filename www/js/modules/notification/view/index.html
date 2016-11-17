@@ -1,0 +1,10 @@
+<ion-view view-title="Notificações">
+    <ion-content>
+        <div class="list">
+            <a class="item item-icon-left" href="#" ng-repeat="item in vm.NotificationData" ng-click="vm.clearItem(item.item)">
+                <i class="icon" ng-class="item.icon"></i><span class="item-note"> {{item.datasend | date: 'dd/MM/yyyy h:mm:ss'}}</span>
+                <p class="text-ajustment">{{item.description}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,8 @@
+<form id="forgotLogin" name="vm.forgotLogin" class="background-none list list-inset" novalidate>
+    <label class="item item-input">
+            <input type="text" name="email" ng-model="vm.forgot.email" placeholder="Email" required>
+    </label>
+    <button class="button button-block button-balanced pull-left item-margin-top-10" ng-click="vm.resetPass()" ng-disabled="vm.forgotLogin.$invalid">Enviar</button>
+    <a class="button button-block button-clear button-dark  item-margin-top-10" ng-click="vm.goBack()">Voltar</a>
+
+</form>
